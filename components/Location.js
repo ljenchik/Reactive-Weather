@@ -1,13 +1,9 @@
 import React from "react";
 import WeatherCard from "./WeatherCard";
 
-const Location = (props) => {
-    const foundCity = props.data.find((item) => item.city === props.location);
-    return (
-        <>
-            <WeatherCard data={foundCity} />
-        </>
-    );
+const Location = ({ data, location }) => {
+    const foundCity = data.find((item) => item.city === location);
+    return <>{foundCity ? <WeatherCard data={foundCity} /> : ""}</>;
 };
 
 export default Location;
