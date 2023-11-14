@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
-const Form = ({ setLocation }) => {
+const Form = ({ setLocation, setMessage }) => {
     const [typedLocation, setTypedLocation] = useState("");
-
     const handleLocation = (event) => {
         setTypedLocation(event.target.value);
+        setMessage("");
     };
+
     const handleSubmit = (event) => {
         event.preventDefault();
         setLocation(typedLocation);
