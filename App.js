@@ -7,7 +7,8 @@ import Location from "./components/Location";
 function App() {
     const [location, setLocation] = useState("");
     return (
-        <div className="app">
+        <div className="app-container">
+            <div></div>
             <h1 className="title">REACTIVE WEATHER</h1>
             <h3 className="subtitle">Up to the minute weather news</h3>
             <Form location={location} setLocation={setLocation} />
