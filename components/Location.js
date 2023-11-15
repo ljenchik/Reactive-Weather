@@ -7,8 +7,10 @@ const Location = ({ data, location, setMessage }) => {
         if (!foundCity) {
             setMessage("Location not found");
             return "";
+        } else {
+            setMessage("");
+            return <WeatherCard data={foundCity} />;
         }
-        return <WeatherCard data={foundCity} />;
     }
 };
 

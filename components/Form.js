@@ -10,6 +10,9 @@ const Form = ({ setLocation, setMessage }) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         setLocation(typedLocation);
+        if (!typedLocation) {
+            setMessage("Enter location");
+        }
         setTypedLocation("");
     };
     return (
